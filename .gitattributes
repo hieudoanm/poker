@@ -3,3 +3,4 @@
 *.css linguist-detectable=false
 *.mjs linguist-detectable=false
 *.js linguist-detectable=false
+*.csv filter=lfs diff=lfs merge=lfs -text

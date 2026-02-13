@@ -184,6 +184,15 @@ const HomePage: NextPage = () => {
 	return (
 		<div className="flex h-screen items-center justify-center p-8">
 			<div className="flex flex-col gap-8">
+				{/* -------- Page Title -------- */}
+
+				<div className="text-center">
+					<h1 className="text-2xl font-bold md:text-3xl">
+						Poker Equity Calculator
+					</h1>
+					<p className="text-sm opacity-60">Hero vs Villain Hand Simulator</p>
+				</div>
+
 				{/* -------- Villain -------- */}
 
 				<div className="flex flex-col items-center gap-2">
@@ -210,7 +219,7 @@ const HomePage: NextPage = () => {
 
 				{/* -------- Board -------- */}
 
-				<div className="flex justify-center gap-3">
+				<div className="grid grid-cols-3 items-center justify-center gap-3 md:grid-cols-5">
 					{community.map((c, i) =>
 						c ? (
 							<CardComponent key={i} card={c} />
