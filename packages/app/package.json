@@ -22,16 +22,17 @@
 		"node": "25.8.1"
 	},
 	"scripts": {
+		"lint": "eslint . --fix",
+		"format": "prettier --cache --write .",
 		"predev": "rimraf .next && kill-port 3000",
 		"dev": "next dev --turbopack",
+		"pretest": "jest --clearCache",
+		"test": "jest",
 		"prebuild": "rimraf .next ../../docs",
 		"build": "next build --turbopack",
 		"postbuild": "touch ../../docs/.nojekyll",
 		"prestart": "kill-port 3000",
-		"start": "next start",
-		"format": "prettier --cache --write .",
-		"lint": "eslint . --fix",
-		"test": "jest"
+		"start": "next start"
 	},
 	"dependencies": {
 		"@capacitor/android": "8.2.0",
